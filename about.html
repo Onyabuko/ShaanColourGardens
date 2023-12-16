@@ -18,7 +18,37 @@
       background-size: cover;
       color: yellow;
     }
+    #shaan-gardens-map {
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+}
+
   </style>
+  <script>
+
+
+function initMap() {
+  const shaanGardensLocation = { lat: 1.5288980942581682, lng: 33.438744528431144 };
+  const map = new google.maps.Map(document.getElementById("shaan-gardens-map"), {
+    center: shaanGardensLocation,
+    zoom: 15,
+    mapTypeId: "hybrid"
+  });
+  const marker = new google.maps.Marker({
+    position: shaanGardensLocation,
+    map: map,
+    title: "Shaan Gardens"
+  });
+}
+
+window.onload = function() {
+    const script = document.createElement("script");
+    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAfw_Q1aVgNMifG5CpA1c7kzfmOarhC5CY&callback=initMap";
+    document.head.appendChild(script);
+  };
+
+  </script>
 </head>
 <body>
   <!-- Navbar -->
@@ -53,9 +83,47 @@
   <section id="about" class="py-5">
     <div class="container">
       <h2 class="text-center">About Us</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed non libero nec turpis pharetra accumsan. In hac habitasse platea dictumst.</p>
+      <p>
+        <h5>Welcome to Shaan Colour Gardens Recreational Area</h5>
+
+        At Shaan Gardens Recreational Area, we believe in creating memorable experiences for you and your loved ones. Nestled in the heart of nature, Shaan Gardens is a haven for those seeking tranquility, fun, and a break from the hustle and bustle of daily life.
+        <br>
+        </p>
+
+        <p>
+        <h5>Our Story</h5>
+        
+        Established with a passion for bringing people closer to nature, Shaan Gardens is more than just a recreational area; it's a celebration of life, laughter, and leisure. Founded by a team of nature enthusiasts, we envisioned a space where families and friends could come together to unwind, connect, and create lasting memories.
+        </p>
+        
+<p>
+        <h5>What We Offer</h5>
+                
+        <b>Scenic Beauty:</b> Immerse yourself in the natural beauty that surrounds Shaan Gardens. Our well-maintained green spaces, vibrant flowers, and refreshing ambiance provide the perfect backdrop for a relaxing day out. <br>
+        
+        <b>Recreational Activities:</b> Whether you're a thrill-seeker or prefer a more laid-back experience, Shaan Gardens has something for everyone. From adventure trails to serene walking paths, playgrounds for the little ones to quiet corners for meditation, our recreational area is designed to cater to diverse interests. <br>
+        
+        <b>Accommodations:</b> Extend your stay and immerse yourself in the tranquility of Shaan Gardens. Our cozy accommodations offer a comfortable retreat, allowing you to wake up to the sounds of nature and enjoy the beauty of the surroundings.
+<br>
+        <b>Event Spaces:</b> Planning a special event? Our versatile event spaces are ideal for hosting birthdays, family gatherings, corporate events, and more. Let us help you create an unforgettable occasion amid the beauty of nature. <br>
+        
+        <b>Café and Refreshments:</b> Take a break and indulge in a variety of refreshments at our café. Whether it's a quick snack or a leisurely meal, our menu is crafted to satisfy your cravings.
+        <br></p>
+       <h5> Our Commitment</h5>
+        
+        At Shaan Gardens, we are committed to sustainability and environmental consciousness. We strive to maintain a balance between providing a delightful recreational experience and preserving the natural ecosystem that makes our space so special.
+        <br>
+        <br>
+        <h5> Visit Us Today</h5>
+        
+        Escape the ordinary and embrace the extraordinary at Shaan Gardens Recreational Area. Whether you're looking for a weekend getaway, a family outing, or a venue for your next event, we invite you to explore all that Shaan Gardens has to offer.
+        
+        Come, join us in creating moments that matter amidst the beauty of nature. We look forward to welcoming you to Shaan Gardens Recreational Area, where every visit is a journey into joy and relaxation..</p>
     </div>
   </section>
+
+
+  <div id="shaan-gardens-map"></div>
 
   
   <!-- Bootstrap JS and dependencies -->
